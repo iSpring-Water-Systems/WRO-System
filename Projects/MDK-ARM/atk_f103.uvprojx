@@ -10,7 +10,7 @@
       <TargetName>SPI</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060960::V5.06 update 7 (build 960)::.\ARMCC</pCCUsed>
+      <pCCUsed>5060528::V5.06 update 5 (build 528)::ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -540,6 +540,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\Drivers\BSP\WIFI\esp8266.c</FilePath>
             </File>
+            <File>
+              <FileName>beep.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Drivers\BSP\Beep\beep.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -565,6 +570,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\Middlewares\USMART\usmart_str.c</FilePath>
             </File>
+            <File>
+              <FileName>sensor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Middlewares\SENSOR\sensor.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -584,6 +594,11 @@
               <FileName>cJSON.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\AWS\CJSON\cJSON.c</FilePath>
+            </File>
+            <File>
+              <FileName>core_mqtt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\AWS\coreMQTT\source\core_mqtt.c</FilePath>
             </File>
           </Files>
         </Group>
