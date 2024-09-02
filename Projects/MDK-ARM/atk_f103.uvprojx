@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>SPI</TargetName>
+      <TargetName>Project</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>5060528::V5.06 update 5 (build 528)::ARMCC</pCCUsed>
@@ -54,7 +54,7 @@
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
-          <BrowseInformation>0</BrowseInformation>
+          <BrowseInformation>1</BrowseInformation>
           <ListingPath>..\..\Output\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
@@ -187,7 +187,7 @@
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
-            <useUlib>0</useUlib>
+            <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
             <nSecure>0</nSecure>
@@ -545,6 +545,16 @@
               <FileType>1</FileType>
               <FilePath>..\..\Drivers\BSP\Beep\beep.c</FilePath>
             </File>
+            <File>
+              <FileName>FlowMeter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\..\Drivers\BSP\Flowmeter\FlowMeter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>FlowMeter.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Drivers\BSP\Flowmeter\FlowMeter.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -569,11 +579,6 @@
               <FileName>usmart_str.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Middlewares\USMART\usmart_str.c</FilePath>
-            </File>
-            <File>
-              <FileName>sensor.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Middlewares\SENSOR\sensor.c</FilePath>
             </File>
           </Files>
         </Group>
