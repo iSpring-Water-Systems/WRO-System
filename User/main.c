@@ -60,8 +60,14 @@ void operateF5(void);
 void operateF6(void);
 void checkTime(void);
 
-
+/* 时钟外设等初始化*/
 void SystemClock_Config(void);
+// 初始化RTC模块
+void  MX_RTC_Init();  
+
+void Error_Handler(void);
+void led_init(void);
+void valve_init(void);
 //void Error_Handler(void);
 //void MQTT_Init(void);      
 //void Sensor_Init(void);//传感器初始化
@@ -76,7 +82,11 @@ void SystemClock_Config(void);
 
 int main(void) {
 	
-	//一系列初始化
+	
+	
+	
+	
+
                                                        
     SystemClock_Config();
 	
@@ -86,10 +96,25 @@ int main(void) {
 //    MQTT_Init();   //初始化MQTT
 //    Display_Update(); // 初始化显示屏
 //	
+ /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+	HAL_Init();
+	// 初始化冲洗调度器
+    FlushScheduler_Init();
+	led_init;//指示灯初始化
+	valve_init;//阀门初始化
 	
+//	user_init_program();
 
     /* 循环体 */
     while (1) {
+		
+		
+	//	 user_main_program();
+	//	flowMeterTick(&flowMeter, 1000);
+//        double currentFlowrate = flowMeterGetCurrentFlowrate(&flowMeter);
+//        double currentVolume = flowMeterGetCurrentVolume(&flowMeter);
+//        printf("Current Flowrate: %.2f l/min, Current Volume: %.2f l\n", currentFlowrate, currentVolume);
+		
 			// 先从云端更新时间，如果未连云取系统时间
 		//	Update_Time_Client();
 			 /* 读取传感器数据 */   
@@ -157,6 +182,22 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   } // 系统时钟配置代码
+}
+
+
+/**
+  * @brief  This function is executed in case of error occurrence.
+  * @retval None
+  */
+void Error_Handler(void)
+{
+  /* USER CODE BEGIN Error_Handler_Debug */
+  /* User can add his own implementation to report the HAL error return state */
+  __disable_irq();
+  while (1)
+  {
+  }
+  /* USER CODE END Error_Handler_Debug */
 }
 
 //************************************************************
